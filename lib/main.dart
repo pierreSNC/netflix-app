@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'widgets/home.dart';
+import 'screens/home.dart';
 
 Future<dynamic> getData() async {
   var response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
@@ -15,10 +15,12 @@ Future<dynamic> getData() async {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
  @override
   Widget build(BuildContext context) {
     return const MaterialApp(

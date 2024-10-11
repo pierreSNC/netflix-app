@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../styles/_variables.dart'; 
-import 'ListCoffee.dart';
+import '../commons/_variables.dart'; 
+import 'list_profil.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,21 +12,21 @@ class Home extends StatelessWidget {
           decoration: const BoxDecoration(
             color: Variables.black,
             image: DecorationImage(
-              image: AssetImage("assets/img/coffee.jpg"),
+              image: AssetImage("assets/img/netflix-logo.png"),
               alignment: Alignment.topCenter,
             ),
           ),
           padding: const EdgeInsets.only(
-          bottom: 48.0,
-          left: 24.0,
-          right: 24.0,
-        ),
+            bottom: 48.0,
+            left: 24.0,
+            right: 24.0,
+          ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             const Center(
               child: Text(
-                'Fall in Love with Coffee in Blissful Delight!',
+                'Unlimited entertainment, one low price!',
                 style: TextStyle(
                 fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -37,8 +37,9 @@ class Home extends StatelessWidget {
               
             ),
               const SizedBox(height: 25),
+              
               const Text(
-                'Welcome to our cozy coffee corner, where every cup is a delightful for you',
+                'All of Netflix, starting at just €9.99.',
                 style: TextStyle(
                   color: Variables.gray,
                 ),
@@ -49,7 +50,7 @@ class Home extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Listcoffee()),
+                    MaterialPageRoute(builder: (context) => const ListProfil()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
