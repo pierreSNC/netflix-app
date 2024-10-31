@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api/commons/_variables.dart';
 import 'package:flutter_api/screens/home.dart';
+import 'package:flutter_api/screens/search.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -69,7 +70,10 @@ class _MoviesDetailsState extends State<MoviesDetails> {
               icon: const Icon(Icons.search, color: Colors.white),
               iconSize: 40.0,
               onPressed: () {
-                // Logique pour la recherche
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Search()),
+                );
               },
             ),
           ],
@@ -89,7 +93,7 @@ class _MoviesDetailsState extends State<MoviesDetails> {
                           movieDetails!['image']['original'],
                           height: 300,
                           width: double.infinity,
-                          fit: BoxFit.cover,
+                          
                         )
                       else
                         const SizedBox(

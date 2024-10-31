@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api/screens/home.dart';
+import 'package:flutter_api/screens/search.dart';
 
 class HeaderDisplayMedia extends StatelessWidget {
   const HeaderDisplayMedia({super.key});
@@ -25,7 +26,10 @@ class HeaderDisplayMedia extends StatelessWidget {
           icon: const Icon(Icons.search, color: Colors.white),
           iconSize: 40.0,
           onPressed: () {
-           
+           Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Search()),
+            );
           },
         ),
       ],

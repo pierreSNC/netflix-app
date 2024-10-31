@@ -18,9 +18,9 @@ class DisplayMedia extends StatelessWidget {
           top: 24.0,
         ),
         color: Variables.black,
-        child: SingleChildScrollView( // Ajout du SingleChildScrollView
+        child: const SingleChildScrollView(
           child: Column(
-            children: const [
+            children: [
               HeaderDisplayMedia(),
               MainMovie(),
               TopRomanceMovies(),

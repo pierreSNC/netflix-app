@@ -21,14 +21,12 @@ class _TopRomanceMoviesState extends State<TopRomanceMovies> {
   }
 
   Future<void> fetchRomanceMovies() async {
-    // Effectuer un appel API pour obtenir des films de romance
     final response = await http.get(Uri.parse('https://api.tvmaze.com/search/shows?q=romance'));
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
 
       setState(() {
-        // Prendre simplement les 10 premiers résultats
         movies = data.take(10).map((show) => show['show']).toList();
       });
     } else {
