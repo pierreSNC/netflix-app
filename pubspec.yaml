@@ -57,6 +57,7 @@ flutter:
   assets:
     - assets/img/profil.jpg
     - assets/img/netflix-logo.png
+    - assets/img/netflix-favicon.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

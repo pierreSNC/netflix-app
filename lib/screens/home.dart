@@ -4,40 +4,41 @@ import 'list_profil.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
-   @override
-   Widget build(BuildContext context) {
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          decoration: const BoxDecoration(
-            color: Variables.black,
-            image: DecorationImage(
-              image: AssetImage("assets/img/netflix-logo.png"),
-              alignment: Alignment.topCenter,
-            ),
-          ),
+          color: Variables.black,
           padding: const EdgeInsets.only(
             bottom: 48.0,
             left: 24.0,
             right: 24.0,
+            top: 48.0
           ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            const Center(
-              child: Text(
-                'Unlimited entertainment, one low price!',
-                style: TextStyle(
-                fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontSize: 40,
-                ) ,
-                textAlign: TextAlign.center,
+          child: Column(
+            children: [
+              FractionallySizedBox(
+                widthFactor: 0.8,
+                child: Image.asset(
+                  "assets/img/netflix-logo.png",
+                  alignment: Alignment.topCenter,
+                  fit: BoxFit.contain,
+                ),
               ),
-              
-            ),
+              const Spacer(),
+              const Center(
+                child: Text(
+                  'Unlimited entertainment, one low price!',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 40,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
               const SizedBox(height: 25),
-              
               const Text(
                 'All of Netflix, starting at just €9.99.',
                 style: TextStyle(
@@ -54,26 +55,25 @@ class Home extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white, 
+                  foregroundColor: Colors.white,
                   backgroundColor: Variables.primary,
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0),
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
                 ),
-              ),
                 child: const Text(
                   'Get started',
                   style: TextStyle(
                     fontSize: 20.0,
                     color: Colors.white,
-                    fontWeight: FontWeight.w600
+                    fontWeight: FontWeight.w600,
                   ),
-                  ),
+                ),
               ),
             ],
           ),
-        )
-
+        ),
       ),
     );
   }
