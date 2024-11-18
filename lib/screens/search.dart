@@ -3,7 +3,7 @@ import 'package:flutter_api/screens/home.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../commons/_variables.dart';
-import 'movies_details.dart'; // Import de la page MoviesDetails
+import 'movies_details.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
